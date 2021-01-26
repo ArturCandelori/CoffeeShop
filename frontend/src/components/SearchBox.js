@@ -17,15 +17,13 @@ const SearchBox = ({ history }) => {
   return (
     <Form onSubmit={handleSubmit} inline>
       <Form.Control
-        size='sm'
         type='text'
         name='q'
         onChange={e => setKeyword(e.target.value)}
         placeholder='Buscar por nome'
-        //className='mr-sm-2 ml-sm-5'
         className='mx-sm-2'
       />
-      <Button type='submit' className='p-2' size='sm'>
+      <Button type='submit' className='p-2'>
         Pesquisar
       </Button>
     </Form>
