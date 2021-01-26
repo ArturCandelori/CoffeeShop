@@ -3,6 +3,10 @@ Projeto com a stack MERN que simula o sistema interno de um café.
 Funcionários podem buscar, criar, editar e remover produtos.
 É necessário login para acessar as páginas e os endpoints.
 
+Para fazer o login:
+email: admin@email.com
+senha: 123456
+
 Na raiz do projeto:
 npm install
 
