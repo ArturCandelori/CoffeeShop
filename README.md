@@ -9,11 +9,17 @@ npm install
 Também dentro da pasta frontend:
 npm install
 
-Para rodar o app (front e back):
+- rodar o app (front e back):
 npm run dev
 
-Para rodar só o back:
+- rodar só o back:
 npm run server
 
-Para rodar só o front:
+- rodar só o front:
 npm run client
+
+- resetar a lista de produtos:
+npm run data:import
+
+- apagar lista de produtos:
+npm run data:destroy
