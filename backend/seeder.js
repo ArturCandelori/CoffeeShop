@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 
 import products from './data/products.js';
+import users from './data/users.js';
 import User from './models/userModel.js';
 import Product from './models/productModel.js';
 import connectDB from './config/db.js';
@@ -20,7 +21,15 @@ const importData = async () => {
       };
     });
 
+    const sampleUsers = users.map(user => {
+      return {
+        ...user,
+      };
+    });
+
     await Product.insertMany(sampleProducts);
+
+    await User.insertMany(sampleUsers);
 
     console.log('Data imported!');
     process.exit();
