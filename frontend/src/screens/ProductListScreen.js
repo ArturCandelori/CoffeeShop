@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
+
 import { useHistory, useParams } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 
 import ProductCard from '../components/ProductCard';
 import Paginate from '../components/Paginate';
+import Meta from '../components/Meta';
 
 const ProductListScreen = ({ user }) => {
   const history = useHistory();
@@ -45,6 +47,7 @@ const ProductListScreen = ({ user }) => {
 
   return (
     <>
+      <Meta title='Produtos' />
       <h2>Lista de produtos</h2>
       {products && (
         <Row>

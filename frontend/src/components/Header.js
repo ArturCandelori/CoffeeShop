@@ -18,9 +18,7 @@ const Header = ({ user, setUser }) => {
     <header>
       <Navbar bg='light' expand='lg' collapseOnSelect>
         <Container>
-          <LinkContainer to='/'>
-            <Navbar.Brand className='text-primary'>CoffeeShop</Navbar.Brand>
-          </LinkContainer>
+          <Navbar.Brand className='text-primary'>CoffeeShop</Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Route render={({ history }) => <SearchBox history={history} />} />

@@ -4,6 +4,7 @@ import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 
 import useForm from '../hooks/useForm';
+import Meta from '../components/Meta.js';
 
 const LoginScreen = ({ setUser }) => {
   console.log(setUser);
@@ -38,49 +39,52 @@ const LoginScreen = ({ setUser }) => {
   };
 
   return (
-    <Container>
-      <Row className='justify-content-md-center'>
-        <Col xs={12} md={6}>
-          <h1>Login</h1>
-          <Form noValidate validated={validated} onSubmit={handleSubmit}>
-            <Form.Group controlId='email'>
-              <Form.Label>E-mail</Form.Label>
-              <Form.Control
-                required
-                type='text'
-                placeholder='Digite seu e-mail'
-                name='email'
-                value={loginForm.email}
-                onChange={handleLoginChange}
-              />
-              <Form.Control.Feedback type='invalid'>
-                Insira um e-mail válido
-              </Form.Control.Feedback>
-            </Form.Group>
+    <>
+      <Meta title='Login' />
+      <Container>
+        <Row className='justify-content-md-center'>
+          <Col xs={12} md={6}>
+            <h1>Login</h1>
+            <Form noValidate validated={validated} onSubmit={handleSubmit}>
+              <Form.Group controlId='email'>
+                <Form.Label>E-mail</Form.Label>
+                <Form.Control
+                  required
+                  type='text'
+                  placeholder='Digite seu e-mail'
+                  name='email'
+                  value={loginForm.email}
+                  onChange={handleLoginChange}
+                />
+                <Form.Control.Feedback type='invalid'>
+                  Insira um e-mail válido
+                </Form.Control.Feedback>
+              </Form.Group>
 
-            <Form.Group controlId='password'>
-              <Form.Label>Senha</Form.Label>
-              <Form.Control
-                required
-                minLength='6'
-                type='password'
-                placeholder='Digite sua senha'
-                name='password'
-                value={loginForm.password}
-                onChange={handleLoginChange}
-              />
-              <Form.Control.Feedback type='invalid'>
-                Senha deve conter no mínimo 6 caracteres
-              </Form.Control.Feedback>
-            </Form.Group>
+              <Form.Group controlId='password'>
+                <Form.Label>Senha</Form.Label>
+                <Form.Control
+                  required
+                  minLength='6'
+                  type='password'
+                  placeholder='Digite sua senha'
+                  name='password'
+                  value={loginForm.password}
+                  onChange={handleLoginChange}
+                />
+                <Form.Control.Feedback type='invalid'>
+                  Senha deve conter no mínimo 6 caracteres
+                </Form.Control.Feedback>
+              </Form.Group>
 
-            <Button type='submit' variant='primary'>
-              Entrar
-            </Button>
-          </Form>
-        </Col>
-      </Row>
-    </Container>
+              <Button type='submit' variant='primary'>
+                Entrar
+              </Button>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 };
 

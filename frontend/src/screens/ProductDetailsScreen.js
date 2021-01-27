@@ -4,6 +4,8 @@ import { Row, Col, Image, ListGroup, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import axios from 'axios';
 
+import Meta from '../components/Meta';
+
 const ProductDetailsScreen = ({ user }) => {
   const history = useHistory();
   const token = localStorage['@CoffeeShop:token'];
@@ -42,6 +44,7 @@ const ProductDetailsScreen = ({ user }) => {
 
   return (
     <>
+      <Meta title={product ? product.name : 'Detalhes'} />
       <LinkContainer to='/'>
         <Button variant='secondary'>Voltar</Button>
       </LinkContainer>

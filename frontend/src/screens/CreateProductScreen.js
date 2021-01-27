@@ -8,6 +8,7 @@ import useForm from '../hooks/useForm';
 import ProductForm from '../components/ProductForm';
 import IngredientForm from '../components/IngredientForm';
 import IngredientList from '../components/IngredientList';
+import Meta from '../components/Meta';
 
 const CreateProductScreen = ({ user }) => {
   const history = useHistory();
@@ -54,6 +55,7 @@ const CreateProductScreen = ({ user }) => {
 
   return (
     <>
+      <Meta title='Criar Produto' />
       <Container>
         <Row>
           <Col xs={12} md={6} className='my-3'>
