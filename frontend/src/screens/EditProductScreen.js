@@ -98,7 +98,10 @@ const EditProductScreen = ({ user }) => {
         </Row>
       </Container>
       {ingredients.length > 0 ? (
-        <IngredientList ingredients={ingredients} />
+        <IngredientList
+          ingredients={ingredients}
+          setIngredients={setIngredients}
+        />
       ) : (
         <p className='my-3 text-danger'>Insira pelo menos um ingrediente</p>
       )}

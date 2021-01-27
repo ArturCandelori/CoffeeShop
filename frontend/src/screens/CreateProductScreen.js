@@ -76,7 +76,10 @@ const CreateProductScreen = ({ user }) => {
         </Row>
       </Container>
       {ingredients.length > 0 ? (
-        <IngredientList ingredients={ingredients} />
+        <IngredientList
+          ingredients={ingredients}
+          setIngredients={setIngredients}
+        />
       ) : (
         <Container>
           <p className='mt-5 text-center'>Insira pelo menos um ingrediente</p>
