@@ -46,13 +46,7 @@ const deleteProduct = asyncHandler(async (req, res) => {
 });
 
 const createProduct = asyncHandler(async (req, res) => {
-  console.log(req.body);
   const { name, price, image, ingredients } = req.body;
-
-  await productSchema.validate(
-    { name, price: Number(price), image, ingredients },
-    { abortEarly: false }
-  );
 
   const product = new Product({ name, price, image, ingredients });
 
@@ -62,11 +56,6 @@ const createProduct = asyncHandler(async (req, res) => {
 
 const updateProduct = asyncHandler(async (req, res) => {
   const { name, price, image, ingredients } = req.body;
-
-  await productSchema.validate(
-    { name, price, image, ingredients },
-    { abortEarly: false }
-  );
 
   const product = await Product.findById(req.params.id);
 

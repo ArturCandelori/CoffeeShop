@@ -51,7 +51,7 @@ const ProductDetailsScreen = ({ user }) => {
             <Image src={product.image} alt={product.name} fluid />
             <Row className='mt-2'>
               <Col xs={6} lg={4}>
-                <LinkContainer to={`/product/save/${params.id}`}>
+                <LinkContainer to={`/products/save/${params.id}`}>
                   <Button block>Editar</Button>
                 </LinkContainer>
               </Col>
