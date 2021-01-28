@@ -1,8 +1,12 @@
 # CoffeeShop
 Projeto com a stack MERN que simula o sistema interno de um café.
-Funcionários podem buscar, criar, editar e remover produtos.
-É necessário login para acessar as páginas e os endpoints.
+Funcionalidades:
+- Listar, criar, editar e deletar produtos.
+- Paginação
+- Busca de produtos por nome
+- Autenticação via JWT
 
+É necessário login para acessar as páginas e os endpoints.
 Para fazer o login:
 email: admin@email.com
 senha: 123456
